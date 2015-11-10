@@ -21,6 +21,13 @@ Creating data frame and changing data types for analysis
 act_frame<- data.frame(activity)
 act_frame<-transform(act_frame,steps=as.numeric(steps),interval=as.numeric(interval))
 library("lubridate")
+```
+
+```
+## Warning: package 'lubridate' was built under R version 3.0.3
+```
+
+```r
 act_frame$date<- ymd(act_frame$date)
 sapply(act_frame, class)
 ```
